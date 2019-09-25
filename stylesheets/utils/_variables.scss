@@ -1,0 +1,57 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+$font-opensans: 'Open Sans';
+$Lato-Regular: 'Lato Regular';
+$Lato-Italic: 'Lato Italic';
+$Lato-Light: 'Lato Light';
+$Lato-Light-Italic: 'Lato Light Italic';
+$Lato-Bold: 'Lato Bold';
+$Lato-Bold-Italic: 'Lato Bold Italic';
+$Lato-Black: 'Lato Black';
+$Lato-Black-Italic: 'Lato Black Italic';
+
+/// @type List
+$text-font-stack: $font-opensans, 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// Copy text color
+/// @type Color
+$text-color: #222 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: WHITE !default;
+
+/// Purple
+/// @type Color
+$purple: #7d439a;
+
+/// Yellow 
+/// @type Color
+$yellow: #eac85c;
+
+/// White
+/// @type Color 
+$white: #fff;
+
+/// Gray
+/// @type Color
+$gray: #888;
+
+/// Light Gray
+/// @type Color
+$light-gray: #ececec;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '../assets/' !default;

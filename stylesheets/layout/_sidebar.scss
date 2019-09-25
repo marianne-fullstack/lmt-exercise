@@ -1,0 +1,48 @@
+.sidebar-atmos {
+  max-width: 350px;
+}
+
+.top-categories,
+.top-selling-products {
+  h4 {
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.top-category-list,
+.top-selling-list {
+  list-style-type: none;
+}
+
+.category,
+.product {
+  padding: 10px 25px;
+
+  color: gray;
+
+  border-bottom: 1px solid gray;
+
+  &:hover {
+    background: #6799c9;
+
+    a {
+      color: white;
+    }
+  }
+
+  a {
+    color: black;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.product {
+  a {
+    margin-left: 5px;
+  }
+}
+

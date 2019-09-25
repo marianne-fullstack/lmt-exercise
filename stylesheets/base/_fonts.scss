@@ -1,0 +1,15 @@
+//main: ../main.scss
+
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@include font-face($font-opensans, $base-url + 'fonts/', 'opensans-regular', 'opensans-regular');
+@include font-face($Lato-Regular, $base-url + 'fonts/', 'lato-regular', 'lato-regular');
+@include font-face($Lato-Italic, $base-url + 'fonts/', 'lato-italic', 'lato-italic');
+@include font-face($Lato-Light, $base-url + 'fonts/', 'lato-light', 'lato-light');
+@include font-face($Lato-Light-Italic, $base-url + 'fonts/', 'lato-light-italic', 'lato-light-italic');
+@include font-face($Lato-Bold, $base-url + 'fonts/', 'lato-bold', 'lato-bold');
+@include font-face($Lato-Bold-Italic, $base-url + 'fonts/', 'lato-bold-italic', 'lato-bold-italic');
+@include font-face($Lato-Black, $base-url + 'fonts/', 'lato-black', 'lato-black');
+@include font-face($Lato-Black-Italic, $base-url + 'fonts/', 'lato-black-italic', 'lato-black-italic');

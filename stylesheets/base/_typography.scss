@@ -1,0 +1,193 @@
+//main: ../main.scss
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+}
+
+.txt-purple {
+  color: $purple;
+}
+
+.txt-white {
+  color: $white;
+}
+
+.txt-yellow {
+  color: $yellow;
+}
+
+a.txt-purple,
+.btn-section {
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.btn {
+  font-family: $Lato-Regular;
+  font-weight: bold;
+}
+
+.btn-toggle {
+  font-family: $Lato-Regular;
+  font-size: 16px;
+}
+
+.home {
+  .desktop-gray-box {
+    margin-left: 65px;
+
+    font-family: $Lato-Light;
+    font-weight: bolder;
+
+    h1 {
+      font-size: 35px;
+    }
+  }
+
+  .section-features {
+    .feature {
+      font-family: $Lato-Bold;
+
+      p {
+        font-family: $Lato-Regular;
+      }
+    }
+  }
+
+  .section-about {
+    .about-heading {
+      font-family: $Lato-Light;
+      font-size: 55px;
+    }
+
+    .swipe-about-title {
+      font-family: $Lato-Black;
+      font-size: 16px;
+    }
+  }
+
+  .section-conservation {
+    font-family: $Lato-Black;
+    color: $white;
+
+    .conserv-title {
+      font-size: 11vw;
+      letter-spacing: 0.45vw;
+    }
+
+    .form-title {
+      font-size: 35px;
+    }
+
+    label {
+      font-family: $Lato-Light;
+      font-size: 14px;
+    }
+
+    select {
+      font-family: $Lato-Regular;
+      font-size: 18px;
+
+      option {
+        color: $text-color;
+      }
+    }
+
+    .btn-section {
+      font-weight: bold;
+    }
+  }
+
+  .section-news {
+    .news-heading {
+      font-family: $Lato-Black;
+      font-size: 37px;
+    }
+
+    .news-details {
+      color: $text-color;
+    }
+
+    .news-title {
+      margin-bottom: 10px;
+
+      font-family: $Lato-Bold;
+      font-size: 53px;
+      line-height: 1;
+    }
+
+    .news-caption {
+      font-family: $Lato-Regular;
+      line-height: 1.6;
+    }
+  }
+
+  .section-responsible-tourism {
+    font-family: $Lato-Black;
+    color: $white;
+
+    .tourism-title {
+      font-size: 7.85vw;
+      letter-spacing: 1.3px;
+    }
+  }
+
+  .section-sponsors {
+    .txt-sponsored-by {
+      font-family: $Lato-Bold;
+      font-size: 14px;
+    }
+
+    .logo-usaid-description {
+      font-family: $Lato-Regular;
+      font-size: 14px;
+    }
+  }
+}
+
+footer {
+  .section-footer {
+    .footer-top {
+      font-family: $Lato-Regular;
+      font-size: 16px;
+      color: $white;
+
+      .footer-links {
+        li {
+          &:hover {
+            a {
+              color: $yellow;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      h6 {
+        font-family: $Lato-Regular;
+        font-size: 16px;
+        color: $white;
+      }
+
+      span {
+        font-family: $Lato-Light;
+        font-size: 14px;
+        color: $white;
+      }
+    }
+
+    .footer-form {
+      span {
+        font-family: $Lato-Regular;
+        color: $white;
+      }
+    }
+  }
+}
