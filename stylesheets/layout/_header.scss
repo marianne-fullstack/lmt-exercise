@@ -7,10 +7,30 @@
 header {
   color: $white;
 
-  background: $purple;
+  nav {
+    background: $purple;
+  }
 
   .navbar {
     height: 55px;
+
+    &.on-scroll {
+      .navbar-brand {
+        top: 3px;
+
+        width: 180px;
+      }
+    }
+  }
+
+  .navbar-brand {
+    position: relative;
+    top: 7px;
+    
+    width: 240px;
+    padding: 0;
+  
+    transition: all .3s ease-in-out;
   }
 
   .lmt-logo {
@@ -81,3 +101,11 @@ header {
   }
 }
 
+@include respond-to(lg) {
+  header {
+    .container-custom {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}

@@ -36,3 +36,11 @@
   margin-top: 51px;
   width: 95%;
 }
+
+.footer-btn {
+  &:hover {
+    color: $yellow;
+
+    background: black;
+  }
+}

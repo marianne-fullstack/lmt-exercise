@@ -9,7 +9,7 @@
     position: relative;
 
     padding-top: 247px;
-    padding-bottom: 95px;
+    padding-bottom: 94px;
 
     text-align: center;
 
@@ -21,7 +21,7 @@
 
     .desktop-gray-box {
       padding: 20px 35px 37px;
-      margin-top: 100px;
+      margin-top: 156px;
       margin-left: 63px;
       max-width: 547px;
 
@@ -151,6 +151,8 @@
       position: absolute;
       left: 0px;
       top: 334px;
+
+      text-align: left;
     }
 
     .swiper-button-next,
@@ -210,7 +212,7 @@
         left: 2px;
         right: 0;
 
-        width: 927px;
+        // width: 927px;
         height: 8px;
 
         background: $yellow;
@@ -403,20 +405,25 @@
   }
 
   .section-responsible-tourism {
-    padding-top: 290px;
+    padding-top: 295px;
     margin-top: -300px;
 
     background: $light-gray;
 
+    .container-custom {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
     .tourism-title {
       position: relative;
-      bottom: -27px;
+      bottom: -12px;
     }
   }
 
   .section-sponsors {
     padding-top: 62px;
-    padding-bottom: 50px;
+    padding-bottom: 53px;
 
     .txt-sponsored-by {
       &:after {
@@ -427,7 +434,7 @@
         left: 136px;
         right: 0;
 
-        width: 90%;
+        // width: 90%;
         height: 2px;
 
         background: $light-gray;
@@ -448,6 +455,108 @@
 
     .logo-usaid-description {
       max-width: 85%;
+    }
+  }
+}
+
+@include respond-to(lg) {
+  .home {
+    .section-features {
+      padding: 80px 8px;
+    }
+
+    .section-about {
+      .about-heading {
+        font-size: 49px;
+      }
+
+      .swiper-container {
+        height: 278px; 
+      }
+
+      .swiper-wrapper {
+        max-width: 880px;
+      }
+
+      .swiper-slide {
+        height: 198px;
+        
+        background-position: center;
+        background-size: cover;
+      }
+
+      .swipe-about-title {
+        top: 214px;
+      }
+
+      .custom-next,
+      .custom-prev {
+        display: none;
+      }
+    }
+
+    .section-conservation {
+      .container-custom {
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+
+      .conserv-title {
+        margin-top: 22px;
+      }
+
+      .wrapper {
+        margin-top: 0;
+        width: 924px;
+      }
+
+      .gray-container {
+        padding-bottom: 42px;
+      }
+
+      .form-title {
+        &:after {
+          width: 863px;
+        }
+      }
+
+      .radios {
+        &:before {
+          width: 400px;
+        }
+      }
+
+      .select-wrapper {
+        &:after {
+          top: -37px;
+          left: 90%;
+        }
+      }
+      
+      .btn-section {
+        width: 98%;
+      }
+
+      .map {
+        flex: 0 0 82%;
+        margin-left: 0;
+
+        img {
+          width: 95%;
+        }
+      }
+
+      .links {
+        flex: 0 0 10%;
+      }
+    }
+
+    .section-news {
+      .swiper-wrapper {
+        .swiper-slide {
+          width: 75%;
+        }
+      }
     }
   }
 }

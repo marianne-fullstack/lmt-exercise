@@ -1,6 +1,6 @@
 $(function(){
   InitHtmlInclude();
-  window.onscroll = function() {scrollFunction()};
+  window.onscroll = function() {scrollNavbar()};
 
   var sections = $("div");
 
@@ -50,6 +50,14 @@ function aboutSwiper(){
       nextEl: '.custom-next',
       prevEl: '.custom-prev',
     },
+
+    breakpoints : {
+      991: {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        spaceBetween: 23
+      }
+    }
   });
 }
 
@@ -60,15 +68,7 @@ function newsSwiper(){
   });
 }
 
-function scrollFunction() {
-  // if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-  //   document.getElementById("lmtLogo").style.top = "-13px";
-  //   document.getElementById("lmtLogo").style.height = "100px";
-  //   document.getElementById("lmtLogo").style.transition = "0.4s";
-  // } else {
-  //   document.getElementById("lmtLogo").style.height = "130px";
-  // }
-
+function scrollNavbar() {
   var windowScroll;
 
   $(window).on('scroll', function() {

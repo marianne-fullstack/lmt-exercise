@@ -101,6 +101,15 @@ a.txt-purple,
     .btn-section {
       font-weight: bold;
     }
+
+    .guide-links {
+      &:hover {
+        color: $yellow;
+        text-decoration: none;
+
+        transition: all .5s ease-in-out;
+      }
+    }
   }
 
   .section-news {
@@ -132,8 +141,11 @@ a.txt-purple,
     color: $white;
 
     .tourism-title {
-      font-size: 7.85vw;
-      letter-spacing: 1.3px;
+      // font-size: 7.6vw;
+      font-size: 5.6vw;
+      white-space: nowrap;
+      line-height: 1;
+      letter-spacing: 4.5px;
     }
   }
 
@@ -154,7 +166,7 @@ footer {
   .section-footer {
     .footer-top {
       font-family: $Lato-Regular;
-      font-size: 16px;
+      font-size: 13px;
       color: $white;
 
       .footer-links {
@@ -172,7 +184,7 @@ footer {
     .footer-bottom {
       h6 {
         font-family: $Lato-Regular;
-        font-size: 16px;
+        font-size: 14px;
         color: $white;
       }
 
@@ -184,10 +196,41 @@ footer {
     }
 
     .footer-form {
-      span {
+      h4,
+      span,
+      .download-link,
+      P {
         font-family: $Lato-Regular;
+        font-size: 14px;  
+      }
+
+      h4,
+      span {
         color: $white;
       }
+
+      .download-link {
+        font-size: 12.5px;
+        color: $yellow;
+      }
+    }
+
+    .percentage {
+      color: $white;
+    }
+  }
+}
+
+@include respond-to(lg) {
+  .home {
+    .section-news {
+      .news-title {
+        font-size: 35px;
+      }
+  
+      .news-caption {
+        font-size: 14px;
+      }    
     }
   }
 }
