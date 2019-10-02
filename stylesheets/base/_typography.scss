@@ -49,6 +49,15 @@ a.txt-purple,
     }
   }
 
+  .banner-slide {
+    h5 {
+      font-family: $Lato-Regular;
+      font-size: 18px;
+      text-align: left;
+      color: $white;
+    }
+  }
+
   .section-features {
     .feature {
       font-family: $Lato-Bold;
@@ -141,8 +150,8 @@ a.txt-purple,
     color: $white;
 
     .tourism-title {
-      // font-size: 7.6vw;
-      font-size: 5.6vw;
+      font-size: 7.6vw;
+      // font-size: 5.6vw;
       white-space: nowrap;
       line-height: 1;
       letter-spacing: 4.5px;
@@ -215,6 +224,14 @@ footer {
       }
     }
 
+    .copyright {
+      span {
+        font-family: $Lato-Light;
+        font-size: 14px;
+        color: $white;
+      }
+    }
+
     .percentage {
       color: $white;
     }
@@ -231,6 +248,55 @@ footer {
       .news-caption {
         font-size: 14px;
       }    
+    }
+  }
+}
+
+@include respond-to(md-down) {
+  .home {
+    .section-about {
+      .about-heading {
+        font-size: 42px;
+      }
+    }
+  }
+
+  footer {
+    .footer-content {
+      .copyright-tablet {
+        h5 {
+          font-family: $Lato-Regular;
+          font-size: 14px;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(md) {
+  .home {
+    .section-conservation {
+      .guide-links {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@include respond-to(sm-down) {
+  .home {
+    .section-about {
+      .about-heading {
+        font-size: 25px;
+      }
+    }
+
+    .section-conservation {
+      .form-title {
+        font-family: $Lato-Regular;
+        font-size: 22px;
+      }
     }
   }
 }

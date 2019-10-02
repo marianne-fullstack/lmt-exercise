@@ -7,6 +7,12 @@
 header {
   color: $white;
 
+  .container-custom {
+    padding-right: 62px;
+    padding-left: 57px;
+    max-width: 100%;
+  }
+
   nav {
     background: $purple;
   }
@@ -16,7 +22,7 @@ header {
 
     &.on-scroll {
       .navbar-brand {
-        top: 3px;
+        top: -5px;
 
         width: 180px;
       }
@@ -36,7 +42,7 @@ header {
   .lmt-logo {
     z-index: 1;
 
-    padding-top: 38px;
+    padding-top: 55px;
     padding-bottom: 0;
 
     box-shadow: 0 11px 7px 0 rgba(0,0,0,.07);
@@ -104,8 +110,104 @@ header {
 @include respond-to(lg) {
   header {
     .container-custom {
-      padding-left: 10px;
       padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+}
+
+@include respond-to(md-down) {
+  header {
+    .container-custom {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    .social-media,
+    .something {
+      display: none;
+    }
+
+    // .nav-buttons {
+    //   margin-left: auto;
+    // }
+
+    .btn-link-nav {
+      .btn-nav {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(sm-down) {
+  header {
+    .navbar {
+      // height: 55px;
+  
+      &.on-scroll {
+        .navbar-brand {
+          top: 15px;
+  
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@include respond-to(sm) {
+  header {
+    .container-custom {
+      position: relative;
+      top: -15px;
+    }
+
+    .navbar-brand {
+      top: 41px;
+      
+      // width: 200px;  
+    }
+
+    .lmt-logo {
+      padding-top: 0;
+      margin-top: -2px;
+      width: 180px;
+    }
+
+    .nav-buttons {
+      margin-top: 28px;
+      margin-left: auto;
+    }
+  }
+}
+
+@include respond-to(xs) {
+  header {
+    .navbar {
+      height: 37px;
+    }
+
+    .lmt-logo {
+      padding-top: 0;
+      width: 55%;
+    }
+
+    .navbar-brand {
+      padding-top: 0;
+      margin-top: -15px;
+    }
+
+    .nav-buttons {
+      justify-content: flex-end;
+      margin-top: -62px;
+      // width: 50px;
+    }
+
+    .btn-link-nav {
+      flex: 0 0 35px;
     }
   }
 }

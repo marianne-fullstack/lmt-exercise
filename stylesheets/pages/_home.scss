@@ -18,16 +18,15 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-
     .desktop-gray-box {
       padding: 20px 35px 37px;
       margin-top: 156px;
-      margin-left: 63px;
+      margin-left: 72px;
       max-width: 547px;
 
       text-align: left;
 
-      background-color: rgba(0,0,0,0.3);
+      background: linear-gradient(143deg, rgba(37, 46, 62, 0.59) 0%, rgba(36, 37, 45, 0.51) 61.5%, rgba(51, 41, 40, 0.75) 61.5%, rgba(37, 43, 58, 0.62) 37%, rgba(13, 17, 25, 0.55) 100%);
 
       h1 {
         margin-bottom: 10px;
@@ -46,6 +45,31 @@
       }
     }
 
+    .banner-swiper {
+      height: 200px;
+    }
+
+    .banner-swiper-pagination {
+      margin-left: 15px;
+      width: auto;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $white;
+    }
+
+    .swiper-pagination-bullet {
+      background: #b8a0c0;
+    }
+
+    .banner-slide {
+      background: $purple;
+
+      h5 {
+        margin-top: 10px;
+      }
+    }
+
     &:before {
       content: '';
       position: absolute;
@@ -60,13 +84,18 @@
   .section-features {
     padding: 80px 50px;
 
+    .container-custom {
+      padding-left: 37px;
+      padding-right: 29px;
+    }
+
     .img-feature {
       margin-bottom: 12px;
       height: 90px;
     }
 
     .swiper-slide {
-      flex: 0 0 25%;
+      // flex: 0 0 25%;
 
       &:hover {
         .stat-feature,
@@ -178,8 +207,8 @@
 
     .wrapper {
       margin-top: 66px;
-      margin-left: 20px;
-      width: 1022px;
+      margin-left: 12px;
+      width: 1018px;
     }
 
     .gray-container {
@@ -212,7 +241,7 @@
         left: 2px;
         right: 0;
 
-        // width: 927px;
+        width: 927px;
         height: 8px;
 
         background: $yellow;
@@ -337,7 +366,10 @@
     }
 
     .img-guide {
+      display: block;
+      margin-right: auto;
       margin-bottom: 10px;
+      margin-left: auto;
     }
 
     .guide-links {
@@ -353,6 +385,11 @@
   .section-news {
     padding-top: 68px;
     padding-left: 6px;
+
+    .container-custom {
+      padding-left: 69px;
+      padding-right: 75px;
+    }
 
     .swiper-wrapper {
       .swiper-slide {
@@ -371,6 +408,7 @@
     }
 
     .news-heading {
+      margin-top: 5px;
       margin-bottom: 13px;
     }
 
@@ -405,7 +443,7 @@
   }
 
   .section-responsible-tourism {
-    padding-top: 295px;
+    padding-top: 322px;
     margin-top: -300px;
 
     background: $light-gray;
@@ -459,10 +497,21 @@
   }
 }
 
+@include respond-to(md-up) {
+  .banner-swiper {
+    display: none;
+  }
+}
+
 @include respond-to(lg) {
   .home {
     .section-features {
       padding: 80px 8px;
+
+      .container-custom {
+        padding-left: 25px;
+        padding-right: 25px;    
+      }
     }
 
     .section-about {
@@ -507,6 +556,7 @@
 
       .wrapper {
         margin-top: 0;
+        margin-left: 17px;
         width: 924px;
       }
 
@@ -516,13 +566,13 @@
 
       .form-title {
         &:after {
-          width: 863px;
+          width: 849px;
         }
       }
 
       .radios {
         &:before {
-          width: 400px;
+          width: 390px;
         }
       }
 
@@ -555,6 +605,308 @@
       .swiper-wrapper {
         .swiper-slide {
           width: 75%;
+
+          &:first-child {
+            .news-details {
+              width: 65%;  
+            }
+          }
+  
+          &:last-child {
+            .news-details {
+              width: 65%;
+            }
+          }
+        }
+      }
+    }
+
+    .section-responsible-tourism {
+      .container-custom {
+        padding-left: 35px;
+        padding-right: 35px;
+      }
+    }
+
+    .section-sponsors {
+      .logo-usaid-description {
+        max-width: 70%;
+      }
+    }
+  }
+}
+
+@include respond-to(md-down) {
+  .home {
+    .section-features {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .section-about {
+      .custom-prev,
+      .custom-next {
+        display: none;
+      }
+    }
+
+    .section-conservation {
+      .gray-container {
+        & > div,
+        .links {
+          flex: 0 0 100%;
+        }
+      }
+
+      .radios {
+        &:before {
+          width: 100%;
+        }
+      }
+
+      .guide-links {
+        display: inline;
+      }
+
+      .map {
+        display: none;
+      }
+
+      .links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+    }
+
+    .section-news {
+      .container-custom {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    }
+
+    .section-sponsors {
+      .container-custom {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+@include respond-to(md) {
+  .home {
+    .section-about {
+      .swiper-wrapper {
+        max-width: 600px;
+      }
+
+      .swiper-slide {
+        height: 285px;
+      }
+
+      .swipe-about-title {
+        top: 300px;
+      }
+    }
+
+    .section-conservation {
+      .heading-wrapper {
+        top: -29px;
+      }
+
+      .wrapper {
+        margin-top: 0;
+        margin-left: 0;
+      }
+
+      .form-title {
+        &:after {
+          width: 97%;
+        }
+      }
+    }
+
+    .section-sponsors {
+      .logo-usaid-description {
+        max-width: 67%;
+      }
+    }
+  }
+}
+
+@include respond-to(sm-down) {
+  .home {
+    .section-banner {
+      padding-bottom: 0;
+      .gray-box-container {
+        display: none;
+      }
+
+      .banner-slide {
+        padding: 15px;
+      }
+    }
+
+    .section-features {
+      padding: 20px;
+
+      background: #f2f2f2;
+
+      .img-feature {
+        margin-bottom: 10px;
+      }
+
+      .dot {
+        &:after {
+          display: none;
+        }
+      }
+
+      .feature-desc {
+        max-width: 100%;
+      }
+    }
+
+    .section-about {
+      .swiper-wrapper {
+        max-width: 330px;
+      }
+    }
+
+    .section-conservation {
+      .container-custom {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      .radios,
+      .toggle-wrapper {
+        display: none;
+      }
+
+      .select-wrapper {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@include respond-to(sm) {
+  .home {
+    .section-banner {
+      .swiper-wrapper {
+        height: 197px;
+      }
+
+      .desktop-gray-box {
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        max-width: 100%;
+      }
+    }
+
+    .section-about {
+      .swiper-holder {
+        height: 300px;
+      }
+
+      .swiper-slide {
+        height: 257px;
+      }
+
+      .swipe-about-title {
+        top: 267px;
+      }
+    }
+
+    .section-conservation {
+      .heading-wrapper {
+        top: -18px;
+      }
+
+      .container-custom {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      .wrapper {
+        margin-right: 5%;
+        margin-left: 5%;
+        width: 90%;
+      }
+
+      .form-title {
+        &:after {
+          width: 96%;
+        }
+      }
+
+      .select-wrapper {
+        &:after {
+          top: 0;
+          right: 30px;
+        }
+      }
+    }
+
+    .section-responsible-tourism {
+      .tourism-title {
+        bottom: -5px;
+      }
+    }
+
+    .section-sponsors {
+      .custom-row {
+        flex-wrap: wrap;
+      }
+
+      .logo-usaid {
+        margin-bottom: 15px;
+      }
+
+      .logo-usaid,
+      .logo-usaid-description {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@include respond-to(xs) {
+  .home {
+    .container-custom {
+      padding: 15px;
+    }
+
+    .section-conservation {
+      .heading-wrapper {
+        top: -25px;
+      }
+
+      .wrapper {
+        margin-top: 20px;
+        margin-right: 2%;
+        margin-left: 2%;
+      }
+
+      .gray-container {
+        padding: 50px 10px 44px;
+      }
+
+      .forms {
+        margin-top: 40px;
+      }
+
+      .form-title {
+        &:after {
+          top: 31px;
+
+          width: 100%;
+          height: 3px;
         }
       }
     }

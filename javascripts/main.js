@@ -4,6 +4,10 @@ $(function(){
 
   var sections = $("div");
 
+  if(sections.hasClass("section-banner")) {
+    bannerSwiper();
+  }
+
   if(sections.hasClass("section-features")) {
     statSwiper();
   }
@@ -34,10 +38,33 @@ function InitHtmlInclude() {
 }
 //End Global functions
 
+function bannerSwiper(){
+  var swiper = new Swiper('.banner-swiper', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    pagination: {
+      el: '.swiper-pagination',
+    }
+  });
+}
+
 function statSwiper(){
   var swiper = new Swiper('.stat-swiper', {
     slidesPerView: 4,
     slidesPerGroup: 4,
+
+    breakpoints : {
+      991: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+
+      767: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 10
+      }
+    }
   });
 }
 
@@ -53,9 +80,14 @@ function aboutSwiper(){
 
     breakpoints : {
       991: {
-        slidesPerView: 4,
-        slidesPerGroup: 4,
-        spaceBetween: 23
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 30
+      },
+
+      767: {
+        slidesPerView: 1,
+        slidesPerGroup: 1
       }
     }
   });
@@ -65,6 +97,20 @@ function newsSwiper(){
   var swiper = new Swiper('.news-swiper', {
     slidesPerView: 2,
     slidesPerGroup: 2,
+    spaceBetween: 10,
+
+    breakpoints: {
+      991: {
+        slidesPerView: 1,
+        slidesPerGroup: 1
+      },
+
+      767: {
+        slidesPerView: 1,
+        slidesPerGroup: 1
+      }
+
+    }
   });
 }
 

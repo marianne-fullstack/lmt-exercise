@@ -9,9 +9,9 @@ footer {
     max-width: 100%;
   }
 
-
-
   .links {
+    display: flex;
+    flex-direction: column;
     flex: 0 0 71.3%;
     padding-top: 39px;
     padding-right: 87px;
@@ -19,6 +19,7 @@ footer {
 
     background: #343434;
   }
+
 
   .footer-form {
     flex: 0 0 28.7%;
@@ -119,7 +120,12 @@ footer {
         vertical-align: middle;
       }
     }
-    
+  }
+
+  .copyright {
+    .by-koein {
+      text-align: left;
+    }
   }
 
   .footer-form {
@@ -187,6 +193,10 @@ footer {
       text-decoration: underline;
     }
   }
+
+  .copyright-tablet {
+    display: none;
+  }
 }
 
 @include respond-to(lg) {
@@ -196,6 +206,121 @@ footer {
         padding-top: 20px;
         padding-left: 10px;
         margin: 0 auto;
+      }
+    }
+
+    .links {
+      flex: 0 0 65.3%;
+      padding-right: 44px;
+      padding-left: 44px;
+    }
+
+    .footer-form {
+      flex: 0 0 34.7%;
+    }
+
+    .footer-bottom {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+@include respond-to(md-down) {
+  footer {
+    .links,
+    .footer-form {
+      flex: 0 0 100%;
+    }
+
+    .links {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    .footer-bottom {
+      order: 1;
+      padding-top: 0;
+
+      border-top: none;
+      border-bottom: 1px solid #9b9b9b;
+    }
+
+    .footer-top {
+      order: 2;
+      margin-top: 35px;
+    }
+
+    .copyright {
+      display: none;
+    }
+
+    .footer-form {
+      .form-content {
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+        padding-top: 25px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: 0;
+        margin-left: 0;
+        max-width: 100%;
+      }
+
+      .form-contact {
+        border-bottom: none;
+        width: 350px;
+      }
+
+      .financials {
+        margin-top: 0;
+        width: 247px;
+      }
+    }
+
+    .copyright-tablet {
+      display: block;
+      padding: 15px;
+      width: 100%;
+
+      background: #343434;
+    }
+  }
+}
+
+@include respond-to(sm-down) {
+  footer {
+    .footer-links {
+      display: none;
+    }
+
+    .footer-top {
+      margin-top: 15px;
+    }
+
+    .footer-top, 
+    .social-media {
+      width: 100%;
+    }
+
+    .form-content {
+      flex-wrap: wrap;
+      padding: 25px 15px;
+    }
+
+    .footer-form {
+      .form-contact,
+      .financials {
+        flex: 0 0 100%;
+      }
+      
+      .form-contact {
+        border-bottom: 1px solid #9b9b9b;
+      }
+
+      .financials {
+        margin-top: 15px;
       }
     }
   }
