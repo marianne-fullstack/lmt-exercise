@@ -31,11 +31,10 @@ header {
 
   .navbar-brand {
     position: relative;
-    top: 7px;
-    
+
     width: 240px;
     padding: 0;
-  
+
     transition: all .3s ease-in-out;
   }
 
@@ -128,9 +127,9 @@ header {
       display: none;
     }
 
-    // .nav-buttons {
-    //   margin-left: auto;
-    // }
+    .nav-buttons {
+      margin-left: auto;
+    }
 
     .btn-link-nav {
       .btn-nav {
@@ -144,16 +143,9 @@ header {
 
 @include respond-to(sm-down) {
   header {
-    .navbar {
-      // height: 55px;
-  
-      &.on-scroll {
-        .navbar-brand {
-          top: 15px;
-  
-          width: 150px;
-        }
-      }
+    .lmt-logo {
+      padding-top: 0;
+      margin-top: 0;
     }
   }
 }
@@ -165,16 +157,22 @@ header {
       top: -15px;
     }
 
-    .navbar-brand {
-      top: 41px;
-      
-      // width: 200px;  
+    .lmt-logo {
+      width: 180px;
     }
 
-    .lmt-logo {
-      padding-top: 0;
-      margin-top: -2px;
-      width: 180px;
+    .navbar {
+      &.on-scroll {
+        .navbar-brand {
+          top: 15px;
+  
+          width: 150px;
+        }
+      }
+    }
+
+    .navbar-brand {
+      top: 41px;
     }
 
     .nav-buttons {
@@ -187,23 +185,37 @@ header {
 @include respond-to(xs) {
   header {
     .navbar {
-      height: 37px;
+      padding: 0.5rem 8px;
+      height: 32px;
+
+      &.on-scroll {
+        .lmt-logo {
+          top: 0;
+
+          width: 120px;
+          height: 75px;
+        }
+
+        // .nav-buttons {
+        //   margin-top: -42px;
+        // }
+      }
     }
 
     .lmt-logo {
-      padding-top: 0;
-      width: 55%;
+      width: 125px;
     }
 
     .navbar-brand {
+      top: 0;
+
       padding-top: 0;
       margin-top: -15px;
     }
 
     .nav-buttons {
       justify-content: flex-end;
-      margin-top: -62px;
-      // width: 50px;
+      margin-top: -58px;
     }
 
     .btn-link-nav {

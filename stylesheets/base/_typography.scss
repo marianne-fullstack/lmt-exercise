@@ -93,6 +93,12 @@ a.txt-purple,
       font-size: 35px;
     }
 
+    .form {
+      .form-label {
+        font-size: 16px;
+      }
+    }
+
     label {
       font-family: $Lato-Light;
       font-size: 14px;
@@ -238,16 +244,48 @@ footer {
   }
 }
 
+@include respond-to(lg-up) {
+  .home {
+    .section-features {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
 @include respond-to(lg) {
   .home {
     .section-news {
       .news-title {
         font-size: 35px;
       }
-  
+
       .news-caption {
         font-size: 14px;
-      }    
+      }
+    }
+  }
+}
+
+// @include respond-to(lg-down) {
+//   .home {
+//     .section-conservation {
+//       .form {
+//         .form-label {
+//           font-size: 16px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+@include respond-to(md) {
+  .home {
+    .section-conservation {
+      .guide-links {
+        font-size: 13px;
+      }
     }
   }
 }
@@ -274,16 +312,6 @@ footer {
   }
 }
 
-@include respond-to(md) {
-  .home {
-    .section-conservation {
-      .guide-links {
-        font-size: 13px;
-      }
-    }
-  }
-}
-
 @include respond-to(sm-down) {
   .home {
     .section-about {
@@ -296,6 +324,103 @@ footer {
       .form-title {
         font-family: $Lato-Regular;
         font-size: 22px;
+      }
+    }
+  }
+}
+
+@include respond-to(xs) {
+  .home {
+    .section-banner {
+      .banner-slide {
+        h5 {
+          font-size: 14px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+    .section-features {
+      .feature-desc {
+        font-size: 14px;
+      }
+    }
+
+    .section-about {
+      .about-heading {
+        font-size: 20px;
+      }
+
+      .btn-about {
+        font-size: 13px;
+      }
+
+      .swipe-about-title {
+        font-size: 14px;
+        text-align: center !important;
+      }
+    }
+
+    .section-conservation {
+      .conserv-title {
+        letter-spacing: 1.45vw;
+      }
+
+      .form-title {
+        font-size: 16px;
+      }
+
+      .form-label {
+        font-size: 12px;
+      }
+    }
+
+    .section-news {
+      .news-title {
+        line-height: 0.85;
+      }
+
+      .news-caption {
+        font-size: 16px;
+      }
+    }
+
+    .section-responsible-tourism {
+      .tourism-title {
+        bottom: -3px;
+
+        font-size: 7vw;
+        letter-spacing: 2.5px;
+      }
+    }
+
+    .section-news {
+      .news-heading {
+        font-size: 27px;
+      }
+
+      .news-title {
+        font-size: 22px;
+      }
+    }
+  }
+
+  footer {
+    .footer-form {
+      .form-contact {
+        h4 {
+          max-width: 231px;
+
+          font-size: 12.5px;
+        }
+      }
+    }
+
+    .footer-content {
+      .copyright-tablet {
+        h5 {
+          font-size: 12px;
+        }
       }
     }
   }

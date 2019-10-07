@@ -139,8 +139,6 @@
     .feature-desc {
       margin-top: 10px;
       max-width: 76%;
-
-      font-size: 16px;
     }
   }
 
@@ -150,12 +148,6 @@
     .about-heading {
       padding-top: 26px;
       max-width: 960px;
-    }
-
-    .btn-about {
-      padding: 9px 30px;
-      margin-top: 40px;
-      margin-bottom: 55px;
     }
 
     .swiper-holder {
@@ -180,8 +172,6 @@
       position: absolute;
       left: 0px;
       top: 334px;
-
-      text-align: left;
     }
 
     .swiper-button-next,
@@ -248,10 +238,6 @@
       }
     }
 
-    .form-label {
-      font-size: 16px;
-    }
-
     .radios {
       position: relative;
 
@@ -307,6 +293,10 @@
       margin-bottom: 41px;
       width: 100%;
 
+      &.mobile-select {
+        display: none;
+      }
+
       &:after {
         content: '\f107';
 
@@ -322,7 +312,7 @@
       }
     }
 
-    select { 
+    select {
       padding-bottom: 10px;
       margin-top: 10px;
       width: 96%;
@@ -455,7 +445,6 @@
 
     .tourism-title {
       position: relative;
-      bottom: -12px;
     }
   }
 
@@ -497,9 +486,9 @@
   }
 }
 
-@include respond-to(md-up) {
-  .banner-swiper {
-    display: none;
+@include respond-to(lg-up) {
+  .tourism-title {
+    bottom: -12px;
   }
 }
 
@@ -581,10 +570,6 @@
           top: -37px;
           left: 90%;
         }
-      }
-      
-      .btn-section {
-        width: 98%;
       }
 
       .map {
@@ -695,6 +680,12 @@
   }
 }
 
+@include respond-to(md-up) {
+  .banner-swiper {
+    display: none;
+  }
+}
+
 @include respond-to(md) {
   .home {
     .section-about {
@@ -745,7 +736,7 @@
       }
 
       .banner-slide {
-        padding: 15px;
+        padding: 20px 25px;
       }
     }
 
@@ -769,12 +760,6 @@
       }
     }
 
-    .section-about {
-      .swiper-wrapper {
-        max-width: 330px;
-      }
-    }
-
     .section-conservation {
       .container-custom {
         padding-right: 15px;
@@ -788,6 +773,26 @@
 
       .select-wrapper {
         margin-bottom: 15px;
+
+        &.mobile-select {
+          display: block;
+        }
+      }
+    }
+
+    .section-sponsors {
+      .custom-row {
+        flex-wrap: wrap;
+      }
+
+      .logo-usaid {
+        margin-bottom: 15px;
+      }
+
+      .logo-usaid,
+      .logo-usaid-description {
+        flex: 0 0 100%;
+        max-width: 100%;
       }
     }
   }
@@ -809,6 +814,10 @@
     }
 
     .section-about {
+      .swiper-wrapper {
+        max-width: 330px;
+      }
+
       .swiper-holder {
         height: 300px;
       }
@@ -857,56 +866,202 @@
         bottom: -5px;
       }
     }
-
-    .section-sponsors {
-      .custom-row {
-        flex-wrap: wrap;
-      }
-
-      .logo-usaid {
-        margin-bottom: 15px;
-      }
-
-      .logo-usaid,
-      .logo-usaid-description {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
-    }
   }
 }
 
 @include respond-to(xs) {
   .home {
-    .container-custom {
-      padding: 15px;
+    .section-banner {
+      padding-top: 199px;
+
+      background-size: 100% 85%;
+    }
+
+    .section-features {
+      padding: 15px 15px 0;
+
+      .container-custom {
+        padding-bottom: 18px;
+        padding-left: 30px;
+      }
+
+      .img-feature {
+        margin-bottom: 4px;
+        height: 62px;
+      }
+
+      .dot {
+        margin-top: 9px;
+        margin-bottom: 0;
+      }
+
+      .feature-desc {
+        margin-top: 3px;
+      }
+    }
+
+    .section-about {
+      padding-right: 10px;
+      padding-bottom: 64px;
+      padding-left: 10px;
+      margin-bottom: 0;
+
+      .container-custom {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      .about-heading {
+        padding-top: 28px;
+      }
+
+      .swiper-wrapper {
+        max-width: 230px;
+        max-height: 230px;
+      }
+
+      .swiper-slide {
+        height: 210px;
+      }
+
+      .swipe-about-title {
+        top: 220px;
+      }
+
+      .custom-prev,
+      .custom-next {
+        top: 50%;
+
+        display: block;
+
+        background-size: 26px 26px;
+      }
+
+      .custom-prev {
+        left: 4px;
+      }
+
+      .custom-next {
+        right: 8px;
+      }
     }
 
     .section-conservation {
+      padding-bottom: 38px;
+
       .heading-wrapper {
-        top: -25px;
+        top: -9px;
       }
 
       .wrapper {
-        margin-top: 20px;
+        margin-top: 28px;
         margin-right: 2%;
         margin-left: 2%;
       }
 
+      .select-wrapper {
+        margin-bottom: 38px;
+        width: 100%;
+        height: 46px;
+
+        &:after {
+          top: -33px;
+          left: 263px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      select {
+        padding-top: 2px;
+        padding-bottom: 8px;
+        width: 100%;
+
+        font-size: 15px;
+      }
+
       .gray-container {
-        padding: 50px 10px 44px;
+        padding: 31px 14px 70px;
       }
 
       .forms {
-        margin-top: 40px;
+        margin-top: 42px;
       }
 
       .form-title {
         &:after {
-          top: 31px;
+          top: 25px;
 
           width: 100%;
           height: 3px;
+        }
+      }
+
+      .links {
+        margin-left: 0;
+      }
+
+      .img-guide {
+        margin-bottom: 16px;
+      }
+    }
+
+    .section-news {
+      padding-top: 25px;
+
+      .container-custom {
+        padding-right: 15px;
+        padding-left: 7px;
+      }
+
+      .swiper-slide {
+        width: 260px;
+      }
+
+      .news-details {
+        top: 0;
+
+        padding-top: 10px;
+        padding-left: 0;
+        margin-left: 0;
+        width: 279px;
+      }
+
+      .news-title {
+        margin-bottom: 0;
+        max-width: 190px;
+      }
+    }
+
+    .section-responsible-tourism {
+      padding-top: 280px;
+    }
+
+    .section-sponsors {
+      padding-top: 25px;
+      padding-bottom: 45px;
+
+      .container-custom {
+        padding-left: 11px;
+      }
+
+      .txt-sponsored-by {
+        &:after {
+          display: none;
+        }
+      }
+
+      .custom-row {
+        margin-top: 5px;
+      }
+
+      .logo-usaid {
+        margin-bottom: 24px;
+
+        img {
+          width: 134px;
         }
       }
     }

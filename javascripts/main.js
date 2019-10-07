@@ -108,8 +108,12 @@ function newsSwiper(){
       767: {
         slidesPerView: 1,
         slidesPerGroup: 1
-      }
+      },
 
+      575: {
+        slidesPerView: 1,
+        slidesPerGroup: 1
+      }
     }
   });
 }

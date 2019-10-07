@@ -45,6 +45,18 @@
   }
 }
 
+@include respond-to(lg-up) {
+  .home {
+    .section-about {
+      .btn-about {
+        padding: 9px 30px;
+        margin-top: 40px;
+        margin-bottom: 55px;
+      }
+    }
+  }
+}
+
 @include respond-to(lg) {
   .btn-section {
     width: 398px;
@@ -54,5 +66,28 @@
 @include respond-to(md-down) {
   .btn-section {
     width: 100%;
+  }
+
+  .btn-about {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@include respond-to(xs) {
+  .home {
+    .section-about {
+      .btn-about {
+        margin-top: 20px;
+        margin-bottom: 21px;
+        padding: 8px 19px;
+      }
+    }
+
+    .section-conservation {
+      .btn-section {
+        margin-top: 3px;
+      }
+    }
   }
 }
