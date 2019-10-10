@@ -17,21 +17,25 @@ footer {
     padding-right: 87px;
     padding-left: 78px;
 
-    background: #343434;
+    background: $graphite;
   }
 
 
   .footer-form {
     flex: 0 0 28.7%;
 
-    background: #585858;
+    background: $light-graphite;
   }
 
   .footer-top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     width: 81%;
+
+    font-family: $Lato-Regular;
+    font-size: 13px;
+    color: $white;
   }
 
   .footer-links {
@@ -41,6 +45,13 @@ footer {
 
     li {
       margin-bottom: 10px;
+
+      &:hover {
+        a {
+          color: $yellow;
+          text-decoration: none;
+        }
+      }
     }
   }
 
@@ -68,7 +79,7 @@ footer {
       width: 36px;
       height: 34px;
 
-      background: #585858;
+      background: $light-graphite;
 
       &:hover {
         background: $white;
@@ -88,10 +99,22 @@ footer {
 
   .footer-bottom {
     padding-top: 33px;
-    padding-left: 40px;
     padding-right: 40px;
+    padding-left: 40px;
 
-    border-top: 1px solid #545454;
+    border-top: 1px solid $med-graphite;
+
+    h6 {
+      font-family: $Lato-Regular;
+      font-size: 14px;
+      color: $white;
+    }
+
+    span {
+      font-family: $Lato-Light;
+      font-size: 14px;
+      color: $white;
+    }
 
     .member-logos {
       display: flex;
@@ -107,27 +130,58 @@ footer {
   }
 
   .copyright {
+    padding-bottom: 10px;
+
+    h5,
     .by-koein {
-      text-align: left;
+      font-family: $Lato-Light;
+      font-size: 14px;
+      color: $white;
+    }
+
+    .by-koein {
+      &:hover {
+        color: $yellow;
+        text-decoration: none;
+      }
+    }
+
+    .by-koein {
+      float: left;
     }
   }
 
   .footer-form {
+    h4,
+    span,
+    .download-link,
+    P {
+      font-family: $Lato-Regular;
+      font-size: 14px;
+    }
+
+    h4,
+    span {
+      color: $white;
+    }
+
+    .download-link {
+      font-size: 12.5px;
+      color: $yellow;
+    }
+
     .form-content {
-      height: 100%;
       padding-top: 39px;
-      // padding-right: 31px;
-      // padding-left: 83px;
       margin-right: auto;
       margin-left: 21%;
       max-width: 320px;
-
+      height: 100%;
     }
 
     .form-contact {
       padding-bottom: 5px;
 
-      border-bottom: 1px solid #9b9b9b;
+      border-bottom: 1px solid $med-gray;
 
       form {
         margin-top: 20px;
@@ -139,9 +193,12 @@ footer {
         margin-bottom: 31px;
         width: 84%;
 
-        background: #585858;
+        font-style: italic;
+        color: $off-white;
+
+        background: $light-graphite;
         border: none;
-        border-bottom: 1px solid #9b9b9b;
+        border-bottom: 1px solid $med-gray;
         border-radius: 0;
       }
 
@@ -149,7 +206,7 @@ footer {
         font-family: $Lato-Regular;
         font-size: 16px;
         font-style: italic;
-        color: #9b9b9b;
+        color: $med-gray;
       }
 
       .footer-btn {
@@ -162,10 +219,10 @@ footer {
     }
 
     .financial-illustration {
-      display: flex;  
+      display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 34px;    
+      margin-top: 34px;
       margin-bottom: 14px;
       width: 212px;
     }
@@ -173,6 +230,10 @@ footer {
     .download-link {
       text-decoration: underline;
     }
+  }
+
+  .percentage {
+    color: $white;
   }
 
   .copyright-tablet {
@@ -236,7 +297,7 @@ footer {
       padding-top: 0;
 
       border-top: none;
-      border-bottom: 1px solid #9b9b9b;
+      border-bottom: 1px solid $med-gray;
     }
 
     .footer-top {
@@ -252,7 +313,6 @@ footer {
       .form-content {
         display: flex;
         justify-content: space-between;
-        max-width: 100%;
         padding-top: 25px;
         padding-right: 15px;
         padding-left: 15px;
@@ -262,8 +322,9 @@ footer {
       }
 
       .form-contact {
-        border-bottom: none;
         width: 350px;
+
+        border-bottom: none;
       }
 
       .financials {
@@ -277,7 +338,13 @@ footer {
       padding: 15px;
       width: 100%;
 
-      background: #343434;
+      background: $graphite;
+
+      h5 {
+        font-family: $Lato-Regular;
+        font-size: 14px;
+        color: $white;
+      }
     }
   }
 }
@@ -292,7 +359,7 @@ footer {
       margin-top: 20px;
     }
 
-    .footer-top, 
+    .footer-top,
     .social-media {
       width: 100%;
     }
@@ -309,7 +376,7 @@ footer {
       }
 
       .form-contact {
-        border-bottom: 1px solid #9b9b9b;
+        border-bottom: 1px solid $med-gray;
       }
 
       .financials {
@@ -372,13 +439,29 @@ footer {
         padding-right: 11px;
         padding-left: 11px;
 
-        .form-contact, 
+        .form-contact {
+          h4 {
+            max-width: 231px;
+
+            font-size: 12.5px;
+          }
+        }
+
+        .form-contact,
         .financials {
           width: auto;
         }
 
         .financials {
           margin-top: 28px;
+        }
+      }
+    }
+
+    .footer-content {
+      .copyright-tablet {
+        h5 {
+          font-size: 12px;
         }
       }
     }

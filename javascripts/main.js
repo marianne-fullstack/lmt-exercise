@@ -1,6 +1,8 @@
 $(function(){
   InitHtmlInclude();
   window.onscroll = function() {scrollNavbar()};
+  toggleBtn();
+  toggleRadio();
 
   var sections = $("div");
 
@@ -62,7 +64,6 @@ function statSwiper(){
       767: {
         slidesPerView: 1,
         slidesPerGroup: 1,
-        spaceBetween: 10
       }
     }
   });
@@ -124,7 +125,7 @@ function scrollNavbar() {
   $(window).on('scroll', function() {
 
     windowScroll = $(window).scrollTop();
-    
+
     console.log(windowScroll);
 
     if (windowScroll > 50) {
@@ -132,5 +133,19 @@ function scrollNavbar() {
     } else {
       $('.navbar').removeClass('on-scroll');
     }
+  });
+}
+
+function toggleBtn() {
+  $(".btn-toggle").click(function() {
+    $(".btn-toggle").removeClass("toggled");
+    $(this).addClass("toggled");
+  });
+}
+
+function toggleRadio() {
+  $(".radio-difficulty").click(function() {
+    $(".radio-difficulty").removeClass("radio-toggled");
+    $(this).addClass("radio-toggled");
   });
 }

@@ -15,12 +15,17 @@
 }
 
 .btn-toggle {
-  flex: 0 0 49.5%;
+  flex: 0 0 47.8%;
   padding: 7px;
+  margin-right: 8px;
   margin-bottom: 5px;
+
+  font-size: 16px;
 
   background: transparent;
   border: 1px solid $white;
+
+  cursor: pointer;
 
   &:hover {
     color: $text-color;
@@ -29,11 +34,17 @@
 
     transition: background .5s ease-in;
   }
+
+  &.toggled {
+    color: $text-color;
+
+    background: $white;
+  }
 }
 
 .btn-section {
   padding: 10px;
-  margin-top: 9px;
+  margin-top: 11px;
   width: 429px;
 }
 
@@ -41,7 +52,7 @@
   &:hover {
     color: $yellow;
 
-    background: black;
+    background: $text-color;
   }
 }
 
@@ -78,9 +89,9 @@
   .home {
     .section-about {
       .btn-about {
+        padding: 8px 19px;
         margin-top: 20px;
         margin-bottom: 21px;
-        padding: 8px 19px;
       }
     }
 
