@@ -37,7 +37,12 @@ header {
 
     &.on-scroll {
       .navbar-brand {
+        top: -4px;
+
+        padding-top: 50px;
         width: 180px;
+
+        transition: all .3s ease-in-out;
       }
     }
   }
@@ -46,17 +51,16 @@ header {
     position: relative;
 
     padding: 0;
+    padding-top: 80px;
     width: 240px;
 
-    transition: all .3s ease-in-out;
+    transition: width .3s ease-in-out;
   }
 
   .lmt-logo {
     z-index: 1;
 
-    padding-top: 55px;
     padding-bottom: 0;
-    height: 200px;
 
     box-shadow: 0 11px 7px 0 rgba(0,0,0,.07);
   }
@@ -142,11 +146,7 @@ header {
         .navbar-brand {
           top: -10px;
 
-          width: 150px;
-
-          .lmt-logo {
-            height: 140px;
-          }
+          width: 180px;
         }
       }
     }
@@ -162,7 +162,6 @@ header {
     }
 
     .nav-buttons {
-      // margin-left: auto;
       width: 100%;
     }
 
@@ -176,6 +175,14 @@ header {
   }
 }
 
+@include respond-to(md) {
+  header {
+    .navbar-brand {
+      top: -11px;
+    }
+  }
+}
+
 @include respond-to(sm) {
   header {
     .container-custom {
@@ -184,45 +191,35 @@ header {
     }
 
     .navbar-brand {
-      top: 41px;
+      top: 42px;
+
+      padding-top: 0;
+      width: 190px;
     }
+
+  .navbar {
+    &.on-scroll {
+      .navbar-brand {
+        top: 10px;
+
+        width: 160px;
+      }
+    }
+  }
 
     .nav-buttons {
       margin-top: 28px;
-      // margin-left: auto;
+    }
+
+    .right-list {
+      margin-left: auto;
+      min-width: 325px;
     }
   }
 }
 
 @include respond-to(sm-down) {
   header {
-    .navbar-brand {
-      width: 160px;
-
-      .lmt-logo {
-        height: 100px;
-      }
-    }
-
-  .navbar {
-    &.on-scroll {
-      .navbar-brand {
-        top: 30px;
-
-        width: 150px;
-
-        .lmt-logo {
-          height: 90px;
-        }
-      }
-    }
-  }
-
-  .right-list {
-    margin-left: auto;
-    min-width: 399px;
-  }
-
     .lmt-logo {
       padding-top: 0;
       margin-top: 0;
@@ -232,31 +229,29 @@ header {
 
 @include respond-to(xs) {
   header {
-    .navbar {
-      padding: 0.5rem 8px;
-      height: 32px;
-
-      &.on-scroll {
-        .navbar-brand {
-          top: -1px;
-        }
-
-        .nav-buttons {
-          margin-top: -82px;
-        }
-      }
-    }
-
-    .navbar-brand {
-      top: 0;
+  .navbar-brand {
+      top: -7px;
 
       padding-top: 0;
-      margin-top: -15px;
+      width: 150px;
     }
 
+  .navbar {
+    &.on-scroll {
+      .navbar-brand {
+        top: -57px;
+
+        width: 135px;
+      }
+
+      .nav-buttons {
+        margin-top: -121px;
+      }
+    }
+  }
+
     .nav-buttons {
-      // justify-content: flex-end;
-      margin-top: -92px;
+      margin-top: -78px;
       margin-left: auto;
       width: 55%;
     }
