@@ -843,6 +843,77 @@
   }
 }
 
+@include respond-to(sm) {
+  .home {
+    .section-banner {
+      .swiper-wrapper {
+        height: 197px;
+      }
+
+      .desktop-gray-box {
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        max-width: 100%;
+      }
+    }
+
+    .section-about {
+      .swiper-wrapper {
+        max-width: 330px;
+      }
+
+      .swiper-holder {
+        height: 300px;
+      }
+
+      .swiper-slide {
+        height: 257px;
+      }
+
+      .swipe-about-title {
+        top: 267px;
+      }
+    }
+
+    .section-conservation {
+      .heading-wrapper {
+        top: -18px;
+      }
+
+      .container-custom {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      .wrapper {
+        margin-right: 5%;
+        margin-left: 5%;
+        width: 90%;
+      }
+
+      .form-title {
+        &:after {
+          width: 96%;
+        }
+      }
+
+      .select-wrapper {
+        &:after {
+          top: 0;
+          right: 30px;
+        }
+      }
+    }
+
+    .section-responsible-tourism {
+      .tourism-title {
+        bottom: -5px;
+      }
+    }
+  }
+}
+
 @include respond-to(sm-down) {
   .home {
     .section-banner {
@@ -921,77 +992,6 @@
       .logo-usaid-description {
         flex: 0 0 100%;
         max-width: 100%;
-      }
-    }
-  }
-}
-
-@include respond-to(sm) {
-  .home {
-    .section-banner {
-      .swiper-wrapper {
-        height: 197px;
-      }
-
-      .desktop-gray-box {
-        margin-top: 0;
-        margin-right: 0;
-        margin-left: 0;
-        max-width: 100%;
-      }
-    }
-
-    .section-about {
-      .swiper-wrapper {
-        max-width: 330px;
-      }
-
-      .swiper-holder {
-        height: 300px;
-      }
-
-      .swiper-slide {
-        height: 257px;
-      }
-
-      .swipe-about-title {
-        top: 267px;
-      }
-    }
-
-    .section-conservation {
-      .heading-wrapper {
-        top: -18px;
-      }
-
-      .container-custom {
-        padding-right: 10px;
-        padding-left: 10px;
-      }
-
-      .wrapper {
-        margin-right: 5%;
-        margin-left: 5%;
-        width: 90%;
-      }
-
-      .form-title {
-        &:after {
-          width: 96%;
-        }
-      }
-
-      .select-wrapper {
-        &:after {
-          top: 0;
-          right: 30px;
-        }
-      }
-    }
-
-    .section-responsible-tourism {
-      .tourism-title {
-        bottom: -5px;
       }
     }
   }
